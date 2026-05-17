@@ -33,8 +33,8 @@ pipeline {
                 . venv/bin/activate
                 pytest
                 ...
+
             }
-        }
     }
 }
 
