@@ -32,7 +32,7 @@ pipeline {
                 sh '''
                 . venv/bin/activate
                 pytest
-                ...
+                '''
 
             }
     }
