@@ -23,7 +23,7 @@ pipeline {
                 sh '''
                 . venv/bin/activate
                 pip install --upgrade pip
-                pip install - requiremnts.txt
+                pip install -r requiremnts.txt
                 '''
             }
         }
