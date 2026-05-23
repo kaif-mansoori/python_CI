@@ -36,8 +36,8 @@ pipeline {
                 . venv/bin/activate
                 pytest
                 '''
-
-            }
+                }
+        }        
     }
 }
 
@@ -74,5 +74,4 @@ post {
                 to: "${EMAIL_TO}"
             )
         }
-    }
 }
