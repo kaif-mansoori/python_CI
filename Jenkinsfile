@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment{
+        EMAIL_TO='mansoorimohdkaif786@gmail.com'
+    }
 
     stages {
         stage('Clone Repository') {
@@ -41,9 +44,35 @@ pipeline {
 post {
     success {
         echo 'Calculator CI Pipeline Successful!'
-        }
+        emailext (
+            subject: "SUCCESS: Jenkins Build #${BUILD_NUMBER}",
+            body: """
+            Build Successful!
+
+            Project: ${JOB_NAME}
+            Build Number: ${BUILD_NUMBER}
+
+            Build URL:
+            ${BUILD_URL}
+            """,
+            to: "${EMAIL_TO}"
+        )
+    }
         failure {
             echo 'Pipeline Failed!'
+            emailext (
+                subject: "SUCCESS: Jenkins Build #${BUILD_NUMBER}",
+                body: """
+                Build Successful!
+
+                Project: ${JOB_NAME}
+                Build Number: ${BUILD_NUMBER}
+
+                Build URL
+                ${BUILD_URL}
+                """,
+                to: "${EMAIL_TO}"
+            )
         }
     }
 }
