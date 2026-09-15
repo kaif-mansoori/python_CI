@@ -13,3 +13,4 @@ Tools practiced include Git, Linux, Terraform, AWS and CI/CD.
 Tools practiced include Git, Linux, Terraform, AWS and CI/CD. 
 ## DevOps Tools
 Tools practiced include Git, Linux, Terraform, AWS and CI/CD.
+Tools practiced include Git, Linux, Terraform, .
