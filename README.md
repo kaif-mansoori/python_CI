@@ -2,3 +2,6 @@
 
 ## python Practice
 This repository contains my python learning and practice work.
+
+## AWS Practice
+This section contains AWS and cloud infrastructure practice.
